@@ -1405,7 +1405,7 @@
   
     const response = await $.ajax({
       type: "GET",
-      url: `https://dekmar-trader.vercel.app/users/${traderIdent}`,
+      url: ` https://methanex-vercel-7ffdfb75cbc2.herokuapp.com/users/${traderIdent}`,
       dataType: "json",
       timeout: 30000,
       success: async function (data) {
@@ -1464,7 +1464,7 @@
 
       const response = await $.ajax({
           type: "GET",
-          url: `https://dekmar-vercel.vercel.app/users/${userFromLS.email}`,
+          url: ` https://methanex-vercel-7ffdfb75cbc2.herokuapp.com/users/${userFromLS.email}`,
           dataType: "json",
           timeout: 30000,
           success: async function (data) {
