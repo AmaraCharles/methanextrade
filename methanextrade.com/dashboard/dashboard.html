@@ -899,48 +899,153 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="chartheight">
-                                        <!-- TradingView Widget BEGIN -->
-                                        <div class="tradingview-widget-container" style="width: 100%; height: 100%;">
-                                            <iframe scrolling="no" allowtransparency="true" frameborder="0" src="./Home _ Dashboard_files/saved_resource.html" title="events TradingView widget" lang="en" style="user-select: none; box-sizing: border-box; display: block; height: 100%; width: 100%;"></iframe>
-
-                                            
-                                        <style>
-	.tradingview-widget-copyright {
-		font-size: 13px !important;
-		line-height: 32px !important;
-		text-align: center !important;
-		vertical-align: middle !important;
-		/* @mixin sf-pro-display-font; */
-		font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright .blue-text {
-		color: #2962FF !important;
-	}
-
-	.tradingview-widget-copyright a {
-		text-decoration: none !important;
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright a:visited {
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright a:hover .blue-text {
-		color: #1E53E5 !important;
-	}
-
-	.tradingview-widget-copyright a:active .blue-text {
-		color: #1848CC !important;
-	}
-
-	.tradingview-widget-copyright a:visited .blue-text {
-		color: #2962FF !important;
-	}
-	</style></div>
-                                        <!-- TradingView Widget END -->
+                                       <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div> -->
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+  {
+  "colorTheme": "dark",
+  "dateRange": "12M",
+  "showChart": true,
+  "locale": "en",
+  "width": "100%",
+  "height": "100%",
+  "largeChartUrl": "",
+  "isTransparent": true,
+  "showSymbolLogo": true,
+  "showFloatingTooltip": false,
+  "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+  "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "scaleFontColor": "rgba(209, 212, 220, 1)",
+  "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+  "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+  "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+  "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+  "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+  "tabs": [
+    {
+      "title": "Indices",
+      "symbols": [
+        {
+          "s": "FOREXCOM:SPXUSD",
+          "d": "S&P 500 Index"
+        },
+        {
+          "s": "FOREXCOM:NSXUSD",
+          "d": "US 100 Cash CFD"
+        },
+        {
+          "s": "FOREXCOM:DJI",
+          "d": "Dow Jones Industrial Average Index"
+        },
+        {
+          "s": "INDEX:NKY",
+          "d": "Japan 225"
+        },
+        {
+          "s": "INDEX:DEU40",
+          "d": "DAX Index"
+        },
+        {
+          "s": "FOREXCOM:UKXGBP",
+          "d": "FTSE 100 Index"
+        }
+      ],
+      "originalTitle": "Indices"
+    },
+    {
+      "title": "Futures",
+      "symbols": [
+        {
+          "s": "CME_MINI:ES1!",
+          "d": "S&P 500"
+        },
+        {
+          "s": "CME:6E1!",
+          "d": "Euro"
+        },
+        {
+          "s": "COMEX:GC1!",
+          "d": "Gold"
+        },
+        {
+          "s": "NYMEX:CL1!",
+          "d": "WTI Crude Oil"
+        },
+        {
+          "s": "NYMEX:NG1!",
+          "d": "Gas"
+        },
+        {
+          "s": "CBOT:ZC1!",
+          "d": "Corn"
+        }
+      ],
+      "originalTitle": "Futures"
+    },
+    {
+      "title": "Bonds",
+      "symbols": [
+        {
+          "s": "CBOT:ZB1!",
+          "d": "T-Bond"
+        },
+        {
+          "s": "CBOT:UB1!",
+          "d": "Ultra T-Bond"
+        },
+        {
+          "s": "EUREX:FGBL1!",
+          "d": "Euro Bund"
+        },
+        {
+          "s": "EUREX:FBTP1!",
+          "d": "Euro BTP"
+        },
+        {
+          "s": "EUREX:FGBM1!",
+          "d": "Euro BOBL"
+        }
+      ],
+      "originalTitle": "Bonds"
+    },
+    {
+      "title": "Forex",
+      "symbols": [
+        {
+          "s": "FX:EURUSD",
+          "d": "EUR to USD"
+        },
+        {
+          "s": "FX:GBPUSD",
+          "d": "GBP to USD"
+        },
+        {
+          "s": "FX:USDJPY",
+          "d": "USD to JPY"
+        },
+        {
+          "s": "FX:USDCHF",
+          "d": "USD to CHF"
+        },
+        {
+          "s": "FX:AUDUSD",
+          "d": "AUD to USD"
+        },
+        {
+          "s": "FX:USDCAD",
+          "d": "USD to CAD"
+        }
+      ],
+      "originalTitle": "Forex"
+    }
+  ]
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
                                     </div>
                                 </div>
                             </div>
@@ -959,46 +1064,20 @@
 
                                     <div class=" chartheight">
                                         <!-- TradingView Widget BEGIN -->
-                                        <div class="tradingview-widget-container" style="width: 100%; height: 100%;">
-                                            <iframe scrolling="no" allowtransparency="true" frameborder="0" src="./Home _ Dashboard_files/saved_resource(1).html" title="symbol overview TradingView widget" lang="en" style="user-select: none; box-sizing: border-box; display: block; height: 100%; width: 100%;"></iframe>
-                                            
-                                        <style>
-	.tradingview-widget-copyright {
-		font-size: 13px !important;
-		line-height: 32px !important;
-		text-align: center !important;
-		vertical-align: middle !important;
-		/* @mixin sf-pro-display-font; */
-		font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright .blue-text {
-		color: #2962FF !important;
-	}
-
-	.tradingview-widget-copyright a {
-		text-decoration: none !important;
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright a:visited {
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright a:hover .blue-text {
-		color: #1E53E5 !important;
-	}
-
-	.tradingview-widget-copyright a:active .blue-text {
-		color: #1848CC !important;
-	}
-
-	.tradingview-widget-copyright a:visited .blue-text {
-		color: #2962FF !important;
-	}
-	</style></div>
-                                        <!-- TradingView Widget END -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div> -->
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "FX:EURUSD",
+  "width": "100%",
+  "isTransparent": true,
+  "colorTheme": "light",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
                                     </div>
 
                                 </div>
@@ -1123,48 +1202,23 @@
                         <div class="panel-body">
 
                             <div class="fullheight">
-                                <!-- TradingView Widget BEGIN -->
-                                <div class="tradingview-widget-container" style="width: 100%; height: 100%;">
-                                    <iframe scrolling="no" allowtransparency="true" frameborder="0" src="./Home _ Dashboard_files/saved_resource(2).html" title="timeline TradingView widget" lang="en" style="user-select: none; box-sizing: border-box; display: block; height: calc(100% - 32px); width: 100%;"></iframe>
-                                    <div class="tradingview-widget-copyright"></div>
-                                    
-                                <style>
-	.tradingview-widget-copyright {
-		font-size: 13px !important;
-		line-height: 32px !important;
-		text-align: center !important;
-		vertical-align: middle !important;
-		/* @mixin sf-pro-display-font; */
-		font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright .blue-text {
-		color: #2962FF !important;
-	}
-
-	.tradingview-widget-copyright a {
-		text-decoration: none !important;
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright a:visited {
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright a:hover .blue-text {
-		color: #1E53E5 !important;
-	}
-
-	.tradingview-widget-copyright a:active .blue-text {
-		color: #1848CC !important;
-	}
-
-	.tradingview-widget-copyright a:visited .blue-text {
-		color: #2962FF !important;
-	}
-	</style></div>
-                                <!-- TradingView Widget END -->
+                              <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div> -->
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+  {
+  "feedMode": "all_symbols",
+  "isTransparent": true,
+  "displayMode": "regular",
+  "width": "100%",
+  "height": "100%",
+  "colorTheme": "dark",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
                             </div>
 
                         </div>
