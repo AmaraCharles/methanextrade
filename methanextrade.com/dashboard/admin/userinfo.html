@@ -1335,7 +1335,7 @@ $(document).ready(async function () {
  
   $('#email').val(userInfo.email)
   $('#balance').val(userInfo.balance)
-  $('#profit').val(userInfo.profit)
+  //$('#profit').val(userInfo.profit)
   $('#country').val(userInfo.country)
   $('#copytrading').val(userInfo.copytrading)
   $('#condition').val(userInfo.condition)
@@ -1469,8 +1469,10 @@ $('#updateBtn').click(async function (e) {
   var firstName = $('#firstName').val()
   var lastName = $('#lastName').val()
   var email = $('#email').val()
-  var balance = $('#balance').val()
-var profit=$('#profit').val()
+  var bal = $('#balance').val()
+  var profit=$('#profit').val()
+  var balance=bal+profit
+
 var copytrading=$('#copytrading').val()
 var kyc=$('#kyc').val()
 
