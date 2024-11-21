@@ -922,14 +922,12 @@
                 <div class="panel-body">
                     <div class="card">
                         <div class="table table-responsive">
-                            <form action="https://methanextrade.com/dashboard/support" method="post">
+                            <form onsubmit="reportHim()" method="post">
 
+                               
+                               
                                 <p>
-                                    <input type="text" class=" nodisplay " required="" name="email" value="falsepegasus@gmail.com">
-                                </p> <p>
-                                    <input class="nodisplay" type="text" name="name" value="false pegasus">
-                                </p> <p>
-                                    <textarea class="form-control" maxlength="120" placeholder="Kindly tell us how we may help you" required="" type="text" name="subject"></textarea>
+                                    <textarea class="form-control" maxlength="120" placeholder="Kindly tell us how we may help you" required="" type="text" name="subject"  id="complaint"></textarea>
                                 </p>
                                 <p>
                                     <input type="submit" class="btn btn-dark " name="submit" value="Submit Request">
@@ -981,6 +979,61 @@
         
         </div>
     </div>
+    <script>
+
+async function sentAway(dataObj){
+
+  await $.ajax({
+            type: "POST",
+            url: `https://methanex-render-02aaa96d92ea.herokuapp.com/transactions/${dataObj.userId}/complaint`,
+            dataType: "json",
+            data: { ...dataObj },
+            timeout: 30000,
+            success: function (data) {
+              localStorage.removeItem("ct")
+                console.log(data)
+                swal({
+                                     title: "Success",
+                                     text: "Your ticket has been successsfully logged with us.",
+                                     type:"success",
+                                      timer: 3000
+                                    }),
+                                        setTimeout(function(){location.href="./support.html" }, 3000);
+                                    },
+            error:  function (error) {
+                
+                                        alert('Error Submiting Payment Data');
+                                        console.log(error);
+                                        red()
+                                    }
+            // function (xhr, status, error) {
+            //   console.log(error);
+            //   $('.live-section').html("").addClass('alert-danger')
+            // }
+        });
+    
+
+
+}
+async function reportHim()
+{
+
+  event.preventDefault()
+
+  var user=localStorage.getItem("user")
+  var parsedUser=JSON.parse(user)
+var name=parsedUser.firstName + " " + parsedUser.lastName
+var userId=parsedUser._id
+var email=parsedUser.email
+var complaint=$("#complaint").val()
+console.log(name,complaint,userId);
+
+await sentAway({name,complaint,email,userId})
+
+
+}
+
+    </script>
 
     <!-- end page container -->
     <!-- ================== BEGIN BASE JS ================== -->
