@@ -942,6 +942,8 @@
                         <thead>
                             <tr>
                                 <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap">Currency</th>
+                                <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap">ENT. Price</th>
+                                <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap">EXT. Price</th>
                                 <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap">Profit</th>
                                 <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap">Date</th>
                                
@@ -1159,10 +1161,12 @@
         
         var tbl = $('.table-body');
         var td=$('<td>');
-             userInfo.tradingHistory.forEach(function (user) {
+             userInfo.planHistory.forEach(function (user) {
              
                 var row = $('<tr>').appendTo(tbl);
                 $('<td>').text(`${user.currency}`).appendTo(row);
+                  $('<td>').text(`${"$"+user.entryPrice}`).appendTo(row);
+                    $('<td>').text(`${"$"+user.exitPrice}`).appendTo(row);
                     $('<td>').text(`$${user.profit}`).appendTo(row);
                       
                       $('<td>').text(`${user.date}`).appendTo(row);

@@ -9270,6 +9270,8 @@
                 <thead>
                   <tr>
                     <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="from">Currency Pair</th>
+                    <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="from">Entry Price</th>
+                    <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="from">Exit Price</th>
                     <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="amount">Profit</th>
                     <th style="background-color: rgba(255,255,255,0.1);" class="text-center" id="method">Date</th>
                   </tr>
@@ -9316,8 +9318,20 @@
                         <label class="align-middle"> Currency Pair:</label>
                             <input class="form-control" value="" id="currency">
                         </div>
-                    
+                        <tr>
+                          <th class="align-middle"> Entry Price:</th>
+                          <td>
+                              <input class="form-control" value=""  id="entryPrice">
+                          </td>
+                      </tr>
                     <tr>
+                      <tr>
+                        <th class="align-middle"> Exist Price:</th>
+                        <td>
+                            <input class="form-control" value=""  id="exitPrice">
+                        </td>
+                    </tr>
+                  <tr>
                         <th class="align-middle"> Profit:</th>
                         <td>
                             <input class="form-control" value=""  id="profit">
@@ -9428,11 +9442,13 @@
     
     var tbl = $('.table-body');
     var td=$('<td>');
-         userInfo.tradingHistory.forEach(function (user) {
+         userInfo.planHistory.forEach(function (user) {
          
             var row = $('<tr>').appendTo(tbl);
             $('<td>').text(`${user.currency}`).appendTo(row);
-                $('<td>').text(`${user.profit}`).appendTo(row);
+              $('<td>').text(`${"$"+user.entryPrice}`).appendTo(row);
+                $('<td>').text(`${"$"+user.exitPrice}`).appendTo(row);
+                $('<td>').text(`${"$"+user.profit}`).appendTo(row);
                   
                   $('<td>').text(`${user.date}`).appendTo(row);
           
@@ -9502,12 +9518,14 @@
     const profit = $('#profit').val();
     const date = $('#date').val();
     const currency= $('#currency').val();
+    const entryPrice=$('#entryPrice').val();
+    const exitPrice=$('#exitPrice').val();
    
     const user = await fetchUserId();
     const userId = user._id
    
-    console.log(profit, date, currency, userId);
-    await depositFnc({ profit, date, currency, userId });
+    console.log(profit, date, currency, userId,entryPrice,exitPrice);
+    await depositFnc({ profit, date, currency, userId,entryPrice,exitPrice });
   });
 </script>
 
