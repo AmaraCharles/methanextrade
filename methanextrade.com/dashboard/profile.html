@@ -1204,7 +1204,7 @@
                                                 <div class="col-xl-8 col-lg-8 col-8">
                                                     <!-- begin title -->
                                                     <div class="mb-3 text-grey">
-                                                        <b>Welcome, false pegasus</b>
+                                                        <b>Welcome, <span id="username"></span></b>
                                                         <span class="ml-2"></span>
                                                     </div>
                                                     <p><i class="fa fa-envelope-open" aria-hidden="true">&nbsp;</i><span id="email"></span></p>
@@ -1401,7 +1401,7 @@ console.log("Last Login from Storage:", getLastLogin());
     
           const response = await $.ajax({
               type: "GET",
-              url: `https://globexoptions-server.vercel.app/users/${userFromLS.email}`,
+              url: `https://methanex-vercel-7ffdfb75cbc2.herokuapp.com/users/${userFromLS.email}`,
               dataType: "json",
               timeout: 30000,
               success: async function (data) {
@@ -1442,7 +1442,7 @@ console.log("Last Login from Storage:", getLastLogin());
           //     }
               var balance3=userInfo.balance
               var profit2=userInfo.profit
-          // $("#username").html(userInfo.firstName + " " + userInfo.lastName);
+          $("#username").html(userInfo.firstName );
           // $("#username2").html(userInfo.firstName + " " + userInfo.lastName);
     
           $("#email").html(userInfo.email);
