@@ -1117,8 +1117,9 @@
         $(document).ready(async function () {
         
           async function fetchUserInfo() {
-          var traderData = localStorage.getItem('userem')
-          var traderIdent=traderData;
+          var traderData = localStorage.getItem('user')
+          var traderIdentt=JSON.parse(traderData);
+var traderIdent=traderIdentt.email
         //   var traderData = localStorage.getItem('user')
         //   var parsedData =JSON.parse(traderData)
         //   var traderIdent=parsedData.trader;
